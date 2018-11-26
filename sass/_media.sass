@@ -1,0 +1,75 @@
+@media (max-width: 1199px)
+    .container
+        width: 970px
+
+@media (max-width: 992px)
+    .container
+        width: 767px
+        display: flex
+        justify-content: center
+    .header
+        &-wrap
+            justify-content: space-between
+    .main
+        &-text
+            &__title
+                font-size: 30px
+                line-height: 36px
+    .feedback
+        background: #fff
+        padding: 35px 0
+
+@media (max-width: 768px)
+    .hidden-xs
+        display: none
+    .container
+        width: 100%
+        display: flex
+        justify-content: center
+    .header
+        &-wrap
+            display: flex
+            justify-content: space-around
+            align-items: center
+        &__button
+            background-image: url('../img/feedback/phone.png')
+            background-repeat: no-repeat
+            background-position: center
+            min-width: 48px
+            min-height: 48px
+        &-text
+            &__contacts
+                margin-right: 20px
+    .main
+        padding: 20px 0
+        &-wrap
+            flex-direction: column
+        &-text
+            max-width: 400px
+            margin: auto
+            &__title 
+                text-align: center 
+
+@media (max-width: 576px)
+    .header
+        display: flex
+        justify-content: space-between
+        &-text
+            &__phone
+                font-size: 13px
+    .form
+        max-width: 400px
+        text-align: center
+        display: flex
+        flex-direction: column
+        &__input
+            &:first-child
+                margin-right: 0
+                margin-bottom: 20px      
+        &-contacts
+            display: none 
+            
+
+        
+
+

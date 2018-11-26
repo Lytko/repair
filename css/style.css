@@ -383,6 +383,13 @@ template {
   outline: none;
 }
 
+.input {
+  font-size: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+}
+
 .header-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,11 +504,110 @@ template {
 
 .main-advantages__img-2 {
   background-image: url("../img/main/calculator.png");
-  background-size: 18px;
+  background-size: 16px;
 }
 
 .main-advantages__img-3 {
   background-image: url("../img/main/paint.png");
+}
+
+.feedback {
+  padding: 94px 0;
+  background: url("../img/feedback/feedback-bg.jpg") no-repeat center right -40%;
+}
+
+.form {
+  max-width: 575px;
+}
+
+.form__title {
+  font-size: 24px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  line-height: 35px;
+  margin-bottom: 45px;
+}
+
+.form__subtitle {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.form__input {
+  min-width: 270px;
+  max-height: 65px;
+  margin-bottom: 30px;
+}
+
+.form__input:first-child {
+  margin-right: 30px;
+}
+
+.form__button {
+  padding: 28px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 31px;
+  max-height: 70px;
+}
+
+.form-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 553px;
+  max-height: 40px;
+}
+
+.form-contacts__block {
+  -ms-flex-preferred-size: 45% 55%;
+      flex-basis: 45% 55%;
+}
+
+.form-contacts__block-1 {
+  margin-right: 75px;
+}
+
+.form-contacts__block-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-contacts__block-2:before {
+  content: url("../img/feedback/phone.png");
+  padding: 11px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  border: 2px solid #cccccc;
+  margin-right: 22px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-contacts__text {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form-contacts__phone {
+  margin-top: 3px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {

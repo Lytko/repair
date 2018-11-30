@@ -7,6 +7,7 @@
     <title>Ремонт квартир</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
 </head>
 
 <body>
@@ -178,13 +179,76 @@
 
 
 
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title section-title_center">
+                Работая с 2007 года, <br>
+                мы сделали более 500 ремонтов в квартирах и домах
+            </h2>
+            <div class="slider">
+                <div class="slider__item">
+                    <img src="img/portfolio/Слой_20.png" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="img/portfolio/Слой_21.png" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="img/portfolio/Слой_22.png" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="img/portfolio/Слой_20.png" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="img/portfolio/Слой_21.png" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="img/portfolio/Слой_22.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/jquery.leanModal.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                nextArrow: '<div class="arrow arrow_right"></div>',
+                prevArrow: '<div class="arrow arrow_left"></div>',
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>

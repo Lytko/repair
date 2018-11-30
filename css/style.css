@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -626,6 +627,7 @@ template {
   position: absolute;
   top: 5px;
   right: 15px;
+  z-index: 99;
 }
 
 .modal__close:hover {
@@ -761,10 +763,53 @@ li {
 }
 
 li span {
-  color: #000000;
+  color: #333;
   font-size: 14px;
   font-weight: 400;
   line-height: 25px;
+}
+
+.portfolio {
+  background-color: #f5f5f5;
+  padding: 100px 0;
+  background: url("../img/portfolio/Прямоугольник.png");
+  max-height: 740px;
+}
+
+.slider__item {
+  text-align: center;
+  height: 280px;
+  margin-right: 30px;
+}
+
+.slider__item img {
+  margin: auto;
+}
+
+.slick-slide {
+  max-height: 280px;
+}
+
+.arrow {
+  width: 45px;
+  height: 19px;
+  position: absolute;
+  bottom: -68px;
+}
+
+.arrow_right {
+  left: 50%;
+  background: url("../img/portfolio/right-arrow.png") no-repeat center;
+  background-size: 100%;
+}
+
+.arrow_left {
+  left: 50%;
+  -webkit-transform: translate(-45px);
+          transform: translate(-45px);
+  margin-left: -30px;
+  background: url("../img/portfolio/left-arrow.png") no-repeat center;
+  background-size: 100%;
 }
 
 *, *::after, *::before {
@@ -784,6 +829,15 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.section-title {
+  font-family: 'Museo Sans Bold', sans-serif;
+  line-height: 45px;
+}
+
+.section-title_center {
+  text-align: center;
 }
 
 @media (max-width: 1199px) {
@@ -827,6 +881,9 @@ img {
   .modal-block2 {
     max-width: 100%;
   }
+  .modal__hidden {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -862,7 +919,7 @@ img {
   }
   .modal__dialog {
     width: 767px;
-    max-height: 767px;
+    height: 100%;
     overflow: scroll;
   }
   .modal-content {
@@ -880,6 +937,9 @@ img {
   }
   .modal-block2 {
     max-width: 100%;
+  }
+  .modal__hidden {
+    display: none;
   }
 }
 
@@ -1003,6 +1063,9 @@ img {
   .modal-block2 {
     max-width: 100%;
   }
+  .modal__hidden {
+    display: none;
+  }
 }
 
 li {
@@ -1022,6 +1085,9 @@ li {
   }
   .modal-block2__items-subtitle {
     text-align: center;
+  }
+  .modal__hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

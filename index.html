@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ремонт квартир</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,7 +22,8 @@
                     <a class="header-text__phone" href="tel:+74954225131">+7 (495) 42-251-31</a>
                 </div>
                 <div class="header-text__button">
-                    <button class="button header__button"><span class="hidden-xs">Перезвоните мне</span></button>
+                    <button class="button header__button" id="button-callback" href="#modal"><span class="hidden-xs">Перезвоните
+                            мне</span></button>
                 </div>
             </div>
         </div>
@@ -89,6 +90,101 @@
 
             </div>
     </section>
+
+
+
+
+
+
+    <div class="modal modal__hidden" id="modal">
+        <div class="modal__dialog">
+            <div class="modal__close">&#10006;</div>
+            <div class="modal-content">
+                <div class="modal-block1 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="modal-block1__items row align-items-center">
+                        <div><img src="img/modal/Слой_30.png" alt="Пример" class="modal-block1__items-img"></div>
+                        <div class="modal-block1__items-text ">
+                            Ванная комната
+                            <hr>
+                            <span style="font-family: 'Museo Sans Light', sans-serif">135*150</span> - 31 000 руб. <br>
+                            <span style="font-family: 'Museo Sans Light', sans-serif">170*170</span> - 43 000 руб.
+                        </div>
+                    </div>
+
+                    <div class="modal-block1__items row align-items-center">
+                        <div><img src="img/modal/Слой_31.png" alt="Пример" class="modal-block1__items-img"></div>
+                        <div class="modal-block1__items-text ">
+                            Туалет
+                            <hr>
+                            <span style="font-family: 'Museo Sans Light', sans-serif">135*70</span> - 14 000 руб.
+                        </div>
+                    </div>
+
+                    <div class="modal-block1__items row align-items-center">
+                        <div><img src="img/modal/Слой_29.png" alt="Пример" class="modal-block1__items-img"></div>
+                        <div class="modal-block1__items-text ">
+                            Совмещенный санузел
+                            <hr>
+                            <span style="font-family: 'Museo Sans Light', sans-serif">170*210</span> - 54 000 руб.
+                        </div>
+                    </div>
+
+                    <h1 class="modal-block1__title">В стоимость работ входит
+                    </h1>
+
+                    <ul>
+                        <li><span>Демонтаж старого покрытия стен и пола</span></li>
+                        <li><span>Выравнивание стен гипсовыми составами</span></li>
+                        <li><span>Грунтовка стен и пола антисептиком, бетоноконтактом</span></li>
+                        <li><span>Монтаж кафельной плитки на полу и стенах</span></li>
+                        <li><span>Установка реечного или натяжного потолка, светильников</span></li>
+                        <li><span>Монтаж двери с коробкой</span></li>
+
+                    </ul>
+
+                </div>
+                <div class="modal-block2 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+
+                    <div class="modal-block2__items">
+                        <div>
+                            <h1 class="modal-block2__items-title">Узнайте точную стоимость
+                                ремонта по телефону!
+                            </h1>
+                            <h2 class="modal-block2__items-subtitle">Заполните поля ниже - мы свяжемся с Вами
+                            </h2>
+                        </div>
+
+
+                        <div class="modal-block2__items-form">
+                            <form action="#">
+                                <input type="text" class="input input-name modal__input" placeholder="Ваше имя">
+                                <input type="tel" pattern="[+]{1}[7]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}" class="input input-tel modal__input"
+                                    placeholder="Ваш телефон">
+                                <button type="submit" class="button modal__button">Узнать стоимость</button>
+                            </form>
+                        </div>
+
+                        <div class="modal-block2__contacts">
+                            <div class="modal-block2__contacts-text">Или Вы можете перезвонить нам сами
+                                по телефону:
+                                <a class="modal-block2__contacts-phone" href="tel:+74954225131">+7(495)42-251-31</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.leanModal.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

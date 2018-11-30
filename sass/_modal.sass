@@ -1,0 +1,118 @@
+.modal 
+    font-family: 'Museo Sans Medium', sans-serif
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, 0.52)
+    left: 0
+    top: 0
+    z-index: 99
+    display: flex
+    &__dialog
+        width: 1170px
+        height: 100%
+        background-color: #fff
+        margin: auto
+        display: flex
+        justify-content: center
+        position: relative
+    &__close
+        position: absolute
+        top: 5px
+        right: 15px
+        &:hover
+            cursor: pointer
+    &-content 
+        border: none
+        display: flex
+        flex-direction: row
+    &-block1
+        background-color: #f7f7f7
+        max-width: 600px
+        padding-top: 80px
+        &__items
+            min-height: 85px
+            margin-bottom: 20px
+            margin-left: 80px
+            &-img
+                margin-right: 29px
+            &-text
+                font-size: 16px
+                font-weight: 400
+                line-height: 15px   
+        &__title
+            margin-left: 50px
+            font-size: 14px
+            font-weight: 400
+            line-height: 45px 
+            margin-left: 80px
+            +bold   
+            margin-top: 33px
+    &-block2
+        display: flex
+        justify-content: center 
+        max-width: 570px
+        &__contacts
+            &-text
+                font-size: 15px
+                font-weight: 400
+                line-height: 20px
+                text-align: center
+            &-phone
+                margin-top: 13px
+                display: block
+                text-decoration: none
+                color: $text-color
+                +bold                    
+                font-size: 20px
+        &__items
+            max-width: 350px
+            &-title
+                font-size: 22px
+                font-weight: 400
+                line-height: 33px
+                +bold
+                text-align: center
+                margin-top: 80px
+            &-subtitle
+                font-family: 'Museo Sans Light', sans-serif
+                font-size: 16px
+                font-weight: 400
+                line-height: 35px
+                margin-top: 30px
+            &-form
+    &__input
+        min-width: 270px
+        max-height: 65px
+        width: 100%
+        &:first-child
+            margin-top: 30px
+            margin-bottom: 15px
+    &__button
+        padding: 28px
+        display: block
+        width: 100%
+        font-size: 16px
+        margin-top: 30px
+        max-height: 70px
+    &__hidden
+        display: none
+
+hr 
+    border: none
+    padding: 0
+    margin: 13px 0
+    width: 42px
+    height: 2px
+    background-color: #ffd200
+
+li 
+    color: #ffd200
+    margin-left: 55px
+   
+li span 
+    color: #000000
+    font-size: 14px
+    font-weight: 400
+    line-height: 25px
+    

@@ -1,6 +1,25 @@
 @media (max-width: 1199px)
     .container
         width: 970px
+        display: flex
+        justify-content: center
+    .modal
+        width: 100% 
+        display: flex
+        justify-content: center
+        &__dialog
+            width: 800px
+            max-height: 767px
+            overflow: scroll
+            margin: 20px
+        &-content
+            display: flex
+            flex-direction: column
+        &-block1
+            dispalay: flex
+            max-width: 100%
+        &-block2
+            max-width: 100%
 
 @media (max-width: 992px)
     .container
@@ -22,6 +41,25 @@
     .feedback
         background: #fff
         padding: 35px 0
+
+    .modal
+        width: 100% 
+        &__dialog
+            width: 767px
+            max-height: 767px
+            overflow: scroll
+
+        &-content
+            display: flex
+            flex-direction: column
+        &-block1
+            dispalay: flex
+            max-width: 100%
+        &-block2
+            max-width: 100%
+        
+           
+    
 
 @media (max-width: 768px)
     .hidden-xs
@@ -90,10 +128,34 @@
             align-items: center
             max-height: none
             padding: 20px
+    .modal
+        width: 100% 
+        &__dialog
+            width: 500px
+            overflow: scroll
+        &-block1
+            display: none   
+        &-block2
+            max-width: 100%
+li 
+    margin-left: 25px  
+
+
+        
 
 @media (max-width: 320px)  
     .container
-        width: 280px
+        width: 300px
+    .modal
+        width: 100% 
+        &__dialog
+            width: 280px
+            overflow: scroll
+        &-block2
+            &__items
+                &-subtitle
+                    text-align: center
+    
 
         
 

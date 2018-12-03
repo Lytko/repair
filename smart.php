@@ -3,6 +3,12 @@
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
 
+$name = $_POST['user_name1'];
+$phone = $_POST['user_phone1'];
+
+$name = $_POST['user_name2'];
+$phone = $_POST['user_phone2'];
+
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';

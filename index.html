@@ -71,10 +71,10 @@
                 <h2 class="form__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!</h2>
                 <span class="form__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
 
-                <form action="#">
-                    <input type="text" class="input input-name form__input" placeholder="Ваше имя">
-                    <input type="tel" pattern="[+]{1}[7]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}" class="input input-tel form__input"
-                        placeholder="Ваш телефон">
+                <form action="smart.php" method="POST" id="loginform">
+                    <input type="text" id="" name="user_name" class="input input-name form__input" placeholder="Ваше имя">
+                    <input type="tel" id="" name="user_phone" pattern="[+]{1}[7]{1}[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}"
+                        class="input input-tel form__input" placeholder="Ваш телефон">
                     <button type="submit" class="button form__button">Получить бесплатный дизайн-проект</button>
                 </form>
 
@@ -153,10 +153,11 @@
 
 
                         <div class="modal-block2__items-form">
-                            <form action="#">
-                                <input type="text" class="input input-name modal__input" placeholder="Ваше имя">
-                                <input type="tel" pattern="[+]{1}[7]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}" class="input input-tel modal__input"
-                                    placeholder="Ваш телефон">
+                            <form action="smart.php" method="POST" id="loginform1">
+                                <input type="text" id="" name="user_name1" class="input input-name modal__input"
+                                    placeholder="Ваше имя">
+                                <input type="tel" id="" name="user_phone1" pattern="[+]{1}[7]{1}[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}"
+                                    class="input input-tel modal__input" placeholder="Ваш телефон">
                                 <button type="submit" class="button modal__button">Узнать стоимость</button>
                             </form>
                         </div>
@@ -243,9 +244,10 @@
                     <h2 class="feedback2-block2__subtitle">Для этого заполните форму ниже</h2>
 
                     <div class="form2">
-                        <form action="mailer/smart.php" method="POST">
-                            <input type="text" id="" name="user_name" class="input input-name form2__input" placeholder="Ваше имя">
-                            <input type="tel" id="" name="user_phone" pattern="[+]{1}[7]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}"
+                        <form action="smart.php" method="POST" id="loginform2">
+                            <input type="text" id="" name="user_name2" class="input input-name form2__input"
+                                placeholder="Ваше имя">
+                            <input type="tel" id="" name="user_phone2" pattern="[+]{1}[7]{1}[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}"
                                 class="input input-tel form2__input" placeholder="Ваш телефон">
                             <button type="submit" class="button form2__button">Рассчитать стоимость</button>
                             <h2 class="feedback2-block2__subtitle2">Мы перезвоним Вам в течение 60 секунд</h2>
@@ -263,8 +265,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/jquery.leanModal.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/main.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
     <script>
         $(document).ready(function () {
@@ -285,19 +290,92 @@
                 }
             });
 
-            $('form').submit(function(event) {
-			event.preventDefault();
-			$.ajax({
-				type: "POST",
-				url: "mailer/smart.php",
-				data: $(this).serialize()
-			}).done(function() {
-				$(this).find("input").val("");
-				alert("Сообщение успешно отправлено");
-				$("form").trigger("reset");
-			});
-			return false;
-		});
+            $('form').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "smart.php",
+                    data: $(this).serialize()
+                }).done(function () {
+                    $(this).find("input").val("");
+
+                    swal("Ваша заявка отправлена!");
+                    $("form").trigger("reset");
+                });
+                return false;
+            });
+
+            $("#loginform").validate({
+                rules: {
+                    user_name: {
+                        required: true,
+                    },
+                    user_phone: {
+                        required: true,
+                        minlength: 12,
+                        maxlength: 12,
+                    },
+                },
+                messages: {
+
+                    user_phone: {
+                        required: "Это поле обязательно для заполнения",
+                        minlength: "Телефон должен иметь минимум 12 символов, и начинаться с «+»",
+                        maxlength: "Телефон должен быть максимум 12 символов, и начинаться с «+»",
+                    },
+                }
+            });
+
+            $("#loginform2").validate({
+                rules: {
+                    user_name2: {
+                        required: true,
+                        minlength: 2,
+                    },
+                    user_phone2: {
+                        required: true,
+                        minlength: 12,
+                        maxlength: 12,
+                    },
+                },
+                messages: {
+                    user_name2: {
+                        required: "Это поле обязательно для заполнения",
+                        minlength: "Имя должно иметь минимум две буквы",
+                    },
+                    user_phone2: {
+                        required: "Это поле обязательно для заполнения",
+                        minlength: "Телефон должен иметь минимум 12 символов, и начинаться с «+»",
+                        maxlength: "Телефон должен быть максимум 12 символов, и начинаться с «+»",
+                    },
+                }
+            });
+
+            $("#loginform1").validate({
+                rules: {
+                    user_name1: {
+                        required: true,
+                        minlength: 2,
+                    },
+                    user_phone1: {
+                        required: true,
+                        minlength: 12,
+                        maxlength: 12,
+                    },
+                },
+                messages: {
+                    user_name1: {
+                        required: "Это поле обязательно для заполнения",
+                        minlength: "Имя должно иметь минимум две буквы",
+                    },
+                    user_phone1: {
+                        required: "Это поле обязательно для заполнения",
+                        minlength: "Телефон должен иметь минимум 12 символов, и начинаться с «+»",
+                        maxlength: "Телефон должен быть максимум 12 символов, и начинаться с «+»",
+                    },
+                }
+            });
+
         });
     </script>
 </body>

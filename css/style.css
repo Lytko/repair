@@ -968,6 +968,28 @@ li span {
   max-height: 70px;
 }
 
+.swal-modal {
+  background-color: #ffd200;
+}
+
+.swal-text {
+  text-align: center;
+  color: black;
+  font-family: 'Museo Sans Bold', sans-serif;
+}
+
+.swal-button {
+  background-color: #ffd200;
+  color: #333;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  outline: 0 !important;
+}
+
+.swal-footer {
+  background-color: #ffffff;
+  margin-top: 32px;
+}
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -994,6 +1016,10 @@ img {
 
 .section-title_center {
   text-align: center;
+}
+
+.error {
+  margin-bottom: 7px;
 }
 
 @media (max-width: 1199px) {
@@ -1136,6 +1162,7 @@ img {
   }
   .form2__button {
     margin-bottom: 5px;
+    background-color: #fff;
   }
 }
 

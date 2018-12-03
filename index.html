@@ -202,6 +202,64 @@
     </section>
 
 
+
+    <section class="feedback2">
+        <div class="container">
+            <div class="feedback2-wrap row">
+                <div class="feedback2-block1 row">
+                    <h1 class="feedback2-block1__title">Мы можем озвучить Вам примерную стоимость работы и материалов
+                        по телефону
+                    </h1>
+                    <h2 class="feedback2-block1__subtitle">Для этого нужно ответить на 4 вопроса:</h2>
+
+                    <div class="feedback2-advantages column">
+                        <div class="feedback2-advantages__item">
+                            <div class="feedback2-advantages__number">1.</div>
+                            <div class="feedback2-advantages__text">Какова площадь помещения?
+                            </div>
+                        </div>
+                        <div class="feedback2-advantages__item">
+                            <div class="feedback2-advantages__number">2.</div>
+                            <div class="feedback2-advantages__text">У Вас новостройка или вторичное жилье?
+                            </div>
+                        </div>
+                        <div class="feedback2-advantages__item">
+                            <div class="feedback2-advantages__number">3.</div>
+                            <div class="feedback2-advantages__text">Где находится помещение, в котором будет
+                                производиться ремонт?
+                            </div>
+                        </div>
+                        <div class="feedback2-advantages__item">
+                            <div class="feedback2-advantages__number">4.</div>
+                            <div class="feedback2-advantages__text">Назначение помещения?
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="feedback2-block2 ">
+                    <h1 class="feedback2-block2__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h1>
+                    <h2 class="feedback2-block2__subtitle">Для этого заполните форму ниже</h2>
+
+                    <div class="form2">
+                        <form action="#" class="js-ajax">
+                            <input type="text" name="fio" class="input input-name form2__input" placeholder="Ваше имя">
+                            <input type="tel" name="phone" pattern="[+]{1}[7]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}"
+                                class="input input-tel form2__input" placeholder="Ваш телефон">
+                            <button type="submit" class="button form2__button">Рассчитать стоимость</button>
+                            <h2 class="feedback2-block2__subtitle2">Мы перезвоним Вам в течение 60 секунд</h2>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/jquery.leanModal.min.js"></script>
@@ -225,8 +283,18 @@
                         items: 3
                     }
                 }
-            })
-        })
+            });
+
+            $('.js-ajax').on('submit', function () {
+                $.ajax({
+                    url: "/send.php",
+                    success: function () {
+                        alert('Load was');
+                    }
+                });
+            });
+
+        });
     </script>
 </body>
 

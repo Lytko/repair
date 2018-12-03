@@ -22,6 +22,9 @@
             max-width: 100%
         &__hidden
             display: none
+    .feedback2
+        &-block1
+            max-width: 500px
 
 @media (max-width: 992px)
     .container
@@ -61,6 +64,29 @@
             max-width: 100%
         &__hidden
             display: none
+    .feedback2
+        background: none
+        padding: 35px 0
+        &:before
+            min-width: 100%
+        &-wrap
+            display: flex
+            flex-direction: column
+        &-block1
+            min-width: 100%
+            &__subtitle
+                margin-bottom: 30px
+        &-advantages
+            margin-bottom: 50px
+        &-block2
+            min-width: 100%
+            display: flex
+            justify-content: center
+    .form2
+        &__button
+            margin-bottom: 5px
+        
+            
         
 @media (max-width: 768px)
     .hidden-xs
@@ -147,8 +173,33 @@
             max-width: 100%
         &__hidden
             display: none
-li 
-    margin-left: 25px  
+    li 
+        margin-left: 25px  
+
+    .portfolio
+        min-height: 770px
+
+    .feedback2
+        &-wrap
+            max-width: 400px
+
+@media (max-width: 500px)
+    .feedback2
+        &-wrap
+            max-width: 350px
+
+
+@media (max-width: 450px)
+    .feedback2
+        &-wrap
+            max-width: 300px
+
+@media (max-width: 400px)
+    .feedback2
+        &-wrap
+            max-width: 250px
+            margin: 10px
+        
 
 @media (max-width: 320px)  
     .container

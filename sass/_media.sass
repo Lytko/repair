@@ -3,6 +3,10 @@
         width: 970px
         display: flex
         justify-content: center
+
+    .feedback
+        &-container
+            
     .modal
         width: 100% 
         display: flex
@@ -24,7 +28,7 @@
             display: none
     .feedback2
         &-block1
-            max-width: 500px
+            flex-basis: 50%
 
     .price
         display: flex
@@ -51,6 +55,18 @@
             align-items: center
             &__block
                 margin-bottom: 50px
+    .feedback2
+        &-block1
+            flex-basis: 55%
+
+
+    .footer
+        display: flex
+        &-map
+            flex-basis: 55%
+        &-contacts
+            margin-top: 60px
+            margin-left: 60px
 
 
 @media (max-width: 992px)
@@ -109,6 +125,7 @@
             min-width: 100%
             display: flex
             justify-content: center
+            margin-top: 90px
     .form2
         &__button
             margin-bottom: 5px
@@ -125,6 +142,14 @@
     .info2
         &-title
             font-size: 25px
+
+    .footer
+        display: flex
+        &-map
+            flex-basis: 50%
+        &-contacts
+            margin-top: 45px
+            margin-left: 45px
             
             
 @media (max-width: 850px)    
@@ -148,7 +173,30 @@
                 margin-bottom: 50px 
     .info2
         &-title
-            font-size: 20px
+            font-size: 25px
+
+    .footer
+        display: flex
+        flex-direction: column
+        &-map
+            flex-basis: 50%
+            order: 2
+        &-contacts
+            margin-right: auto
+            margin-left: auto
+            order: 1
+            width: 100%
+            margin-top: 40px
+            &__title
+                max-width: 600px
+                margin-right: auto
+                margin-left: auto
+                text-align: center   
+        &-items
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            margin-top: 40px
         
 @media (max-width: 768px)
     .hidden-xs
@@ -236,7 +284,33 @@
                 margin-bottom: 50px   
     .info2
         &-title
-            font-size: 15px
+            font-size: 25px
+
+    .footer
+        &-contacts
+            display: flex
+            &__text
+                font-size: 13px
+                font-weight: 300
+                line-height: 20px
+            &__title
+                max-width: 500px
+        
+@media (max-width: 650px)
+    .footer
+        &-contacts
+            &__items
+                min-width: 188px
+            &__title
+                max-width: 400px
+                font-size: 17px
+        &-items
+            margin-top: 30px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
 
 @media (max-width: 576px)
     .feedback
@@ -297,7 +371,7 @@
                 margin-bottom: 50px 
     .info2
         &-title
-            font-size: 15px
+            font-size: 25px
 
 @media (max-width: 500px)
     .feedback2
@@ -335,13 +409,21 @@
                 margin-bottom: 50px   
     .info2
         &-title
-            font-size: 20px
+            font-size: 25px
 
 
 @media (max-width: 450px)
     .feedback2
         &-wrap
             max-width: 300px
+
+    .footer
+        &-contacts
+            &__title
+                max-width: 300px
+        &-items
+            margin-top: 25px
+            
 
 @media (max-width: 400px)
     .feedback2
@@ -378,9 +460,6 @@
             &__block
                 max-width: 50%
                 margin-bottom: 50px   
-    .info2
-        &-title
-            font-size: 25px
         
 
 @media (max-width: 320px)  

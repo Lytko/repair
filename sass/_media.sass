@@ -28,10 +28,29 @@
 
     .price
         display: flex
+        flex-direction: row
         &-container
-            
             flex-direction: column
+            align-items: center
+            justify-content: center
         &-wrap
+            max-width: 970px
+            align-items: center
+
+    .info
+        display: flex
+        padding-bottom: 160px
+        &-container
+            display: flex
+            flex-direction: column
+            align-items: center
+        &-wrap
+            display: flex
+            flex-wrap: wrap
+            max-width: 700px
+            align-items: center
+            &__block
+                margin-bottom: 50px
 
 
 @media (max-width: 992px)
@@ -94,8 +113,42 @@
         &__button
             margin-bottom: 5px
             background-color: #fff
-        
+    .price
+        display: flex
+        flex-direction: row
+        &-container
+            min-width: 850px
+            flex-direction: column
+        &-wrap
+            max-width: 830px
+            justify-content: space-around
+    .info2
+        &-title
+            font-size: 25px
             
+            
+@media (max-width: 850px)    
+
+    .price
+        display: flex
+        flex-direction: row
+        &-container
+            min-width: 750px
+            flex-direction: column  
+        &-wrap
+            max-width: 830px
+            align-items: center
+            justify-content: center  
+    .info
+        &-container
+            max-width: 750px
+        &-wrap
+            max-width: 680px
+            &__block
+                margin-bottom: 50px 
+    .info2
+        &-title
+            font-size: 20px
         
 @media (max-width: 768px)
     .hidden-xs
@@ -157,7 +210,33 @@
             &:first-child
                 margin-right: 0
                 margin-bottom: 20px 
-        
+    .price
+        display: flex
+        flex-direction: column
+        &-title
+            font-size: 20px
+        &-container
+            min-width: 600px
+            flex-direction: column  
+        &-wrap
+            display: flex
+            flex-direction: column
+            max-width: 600px
+            align-items: center
+            justify-content: center 
+    .info
+        &-title
+            font-size: 20px
+        &-container
+            max-width: 600px
+        &-wrap
+            max-width: 500px
+            padding-bottom: 430px
+            &__block
+                margin-bottom: 50px   
+    .info2
+        &-title
+            font-size: 15px
 
 @media (max-width: 576px)
     .feedback
@@ -192,10 +271,71 @@
         &-wrap
             max-width: 400px
 
+    .price
+        display: flex
+        flex-direction: column
+        &-title
+            font-size: 20px
+        &-container
+            min-width: 500px
+            flex-direction: column  
+        &-wrap
+            display: flex
+            flex-direction: column
+            max-width: 500px
+            align-items: center
+            justify-content: center 
+    .info
+        &-title
+            font-size: 15px
+        &-container
+            max-width: 450px
+        &-wrap
+            max-width: 500px
+            padding-bottom: 430px
+            &__block
+                margin-bottom: 50px 
+    .info2
+        &-title
+            font-size: 15px
+
 @media (max-width: 500px)
     .feedback2
         &-wrap
             max-width: 350px
+    .price
+        display: flex
+        flex-direction: column
+        &-title
+            font-size: 20px
+        &-container
+            min-width: 400px
+            flex-direction: column  
+        &-wrap
+            display: flex
+            flex-direction: column
+            max-width: 400px
+            align-items: center
+            justify-content: center 
+    .info
+        &-title
+            font-size: 20px
+        &-container
+            max-width: 400px
+        &-wrap
+            max-width: 400px
+            padding-bottom: 600px
+            justify-content: space-around
+            &__img
+                max-width: 50px
+                height: 50px
+                background-size: 50%
+            &__block
+                max-width: 50%
+                margin-bottom: 50px   
+    .info2
+        &-title
+            font-size: 20px
 
 
 @media (max-width: 450px)
@@ -208,6 +348,39 @@
         &-wrap
             max-width: 250px
             margin: 10px
+    .price
+        display: flex
+        flex-direction: column
+        &-title
+            font-size: 20px
+        &-container
+            min-width: 300px
+            flex-direction: column  
+        &-wrap
+            display: flex
+            flex-direction: column
+            max-width: 300px
+            align-items: center
+            justify-content: center 
+    .info
+        &-title
+            font-size: 20px
+        &-container
+            max-width: 300px
+        &-wrap
+            max-width: 300px
+            padding-bottom: 700px
+            justify-content: space-around
+            &__img
+                max-width: 50px
+                height: 50px
+                background-size: 50%
+            &__block
+                max-width: 50%
+                margin-bottom: 50px   
+    .info2
+        &-title
+            font-size: 15px
         
 
 @media (max-width: 320px)  

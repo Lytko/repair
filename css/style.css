@@ -1754,7 +1754,7 @@ button, input {
             justify-content: center;
   }
   .info-title {
-    font-size: 15px;
+    font-size: 20px;
   }
   .info-container {
     max-width: 450px;
@@ -1904,7 +1904,7 @@ button, input {
     margin-bottom: 50px;
   }
   .info2-title {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 

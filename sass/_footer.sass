@@ -1,0 +1,38 @@
+.footer
+    display: flex
+    &-map
+        flex-basis: 55%
+        min-height: 640px
+    &-contacts
+        margin-top: 100px
+        margin-left: 134px
+        display: flex
+        flex-direction: column
+        &__title
+            max-width: 300px
+            font-size: 22px
+            font-weight: 400
+            +bold
+        &__items
+            display: flex
+            flex-direction: row  
+            margin-bottom: 30px  
+        &__img
+            margin-right: 25px
+            padding-top: 5px
+            min-width: 20px
+        &__text
+            font-size: 16px
+            font-weight: 400
+            line-height: 26px
+            color: #000000
+            
+    &-items
+        display: flex
+        flex-direction: column
+        margin-top: 60px
+
+
+    &-text
+        &__bold
+            +bold

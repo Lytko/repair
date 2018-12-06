@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
 </head>
 
 <body>
@@ -385,7 +387,7 @@
     <footer class="footer">
 
         <div class="footer-map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad2134836f6afd0a991b4960f498ccae06c4fd75f3a284824f61f8d7eb38efa0b&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+            <div id="map" style="width: 100%; height: 640px;"></div>
         </div>
         <div class="footer-contacts">
             <div class="footer-contacts__title">
@@ -420,9 +422,7 @@
 
             </div>
         </div>
-
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -433,6 +433,37 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/scrollAnimation.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=10750735-cef6-4b2a-9f81-82a0bd7fddf5" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('map', {
+                center: [51.397237, 21.151956],
+                zoom: 13
+            }, {
+                searchControlProvider: 'yandex#search'
+            })
+
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                ),
+
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    hintContent: 'Ремонт квартир',
+                    balloonContent: 'Метка моего университета в Польше'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/pin.png',
+                    iconImageSize: [64, 64],
+                    iconImageOffset: [-5, -38]
+                })
+
+            myMap.geoObjects
+                .add(myPlacemark)
+                .add(myPlacemarkWithContent);
+        });
+    </script>
+
 
     <script>
         new WOW().init();

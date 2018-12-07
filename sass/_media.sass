@@ -3,9 +3,6 @@
         width: 970px
         display: flex
         justify-content: center
-
-    .feedback
-        &-container
             
     .modal
         width: 100% 
@@ -81,11 +78,12 @@
             justify-content: space-between
     .main
         &-text
+            min-width: 100% !important
             &__title
                 font-size: 30px
                 line-height: 36px
         &-image
-            margin: auto
+            display: none
     .feedback
         background: #fff
         padding: 35px 0
@@ -234,6 +232,10 @@
                 text-align: center 
         &-image
             margin: auto
+            z-index: none
+        &-img
+            max-width: 100%
+            max-height: 10%
     .feedback
         min-height: 700px
         padding-bottom: 0

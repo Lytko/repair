@@ -486,6 +486,17 @@ template {
 .main {
   background-color: #f5f5f5;
   padding: 60px 0;
+  max-height: 590px;
+}
+
+.main-img {
+  max-width: 150%;
+  max-height: 150%;
+}
+
+.main-image {
+  z-index: 3;
+  right: -20px;
 }
 
 .main-text__title {
@@ -565,6 +576,15 @@ template {
   background-color: #fff;
   position: absolute;
   z-index: -1;
+}
+
+.feedback-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
 }
 
 .form {
@@ -1479,12 +1499,15 @@ button, input {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .main-text {
+    min-width: 100% !important;
+  }
   .main-text__title {
     font-size: 30px;
     line-height: 36px;
   }
   .main-image {
-    margin: auto;
+    display: none;
   }
   .feedback {
     background: #fff;
@@ -1732,6 +1755,11 @@ button, input {
   }
   .main-image {
     margin: auto;
+    z-index: none;
+  }
+  .main-img {
+    max-width: 100%;
+    max-height: 10%;
   }
   .feedback {
     min-height: 700px;

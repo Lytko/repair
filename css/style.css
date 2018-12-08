@@ -490,13 +490,12 @@ template {
 }
 
 .main-img {
-  min-width: 140%;
-  max-height: 140%;
+  min-width: 130%;
+  max-height: 130%;
 }
 
 .main-image {
   z-index: 1;
-  right: -20px;
 }
 
 .main-text__title {
@@ -799,6 +798,10 @@ template {
   font-weight: 400;
   line-height: 35px;
   margin-top: 30px;
+}
+
+.modal-block2__items-form {
+  margin-bottom: 20px;
 }
 
 .modal__input {

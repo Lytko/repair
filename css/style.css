@@ -562,7 +562,7 @@ template {
 .feedback {
   padding: 94px 0;
   background: url("../img/feedback/feedback-bg.jpg") no-repeat center left 700px;
-  background-size: contain;
+  background-size: auto 130%;
   position: relative;
   z-index: -1;
 }

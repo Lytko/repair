@@ -2,7 +2,16 @@
     .container
         width: 970px
         display: flex
-        justify-content: center   
+        justify-content: center  
+    .main
+        &-text
+            &__title
+                min-width: 100%
+                font-size: 37px
+    .header
+        &-wrap 
+            display: flex
+            justify-content: space-between !important
     .modal
         width: 100% 
         display: flex
@@ -108,7 +117,7 @@
             min-width: 100%
         &-wrap
             display: flex
-            flex-direction: column
+            flex-direction: column !important
         &-block1
             min-width: 100%
             &__subtitle
@@ -138,11 +147,26 @@
             font-size: 25px
     .footer
         display: flex
+        flex-direction: column
         &-map
-            flex-basis: 50%
+            flex-basis: 100%
+            order: 2
         &-contacts
-            margin-top: 45px
-            margin-left: 45px
+            margin-right: auto
+            margin-left: auto
+            order: 1
+            width: 100%
+            margin-top: 40px
+            &__title
+                max-width: 600px
+                margin-right: auto
+                margin-left: auto
+                text-align: center   
+        &-items
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            margin-top: 40px
                 
 @media (max-width: 850px)    
     .price
@@ -165,28 +189,6 @@
     .info2
         &-title
             font-size: 25px
-    .footer
-        display: flex
-        flex-direction: column
-        &-map
-            flex-basis: 50%
-            order: 2
-        &-contacts
-            margin-right: auto
-            margin-left: auto
-            order: 1
-            width: 100%
-            margin-top: 40px
-            &__title
-                max-width: 600px
-                margin-right: auto
-                margin-left: auto
-                text-align: center   
-        &-items
-            display: flex
-            flex-direction: row
-            justify-content: space-around
-            margin-top: 40px
         
 @media (max-width: 768px)
     .hidden-xs
@@ -431,6 +433,12 @@
             margin-top: 25px
             
 @media (max-width: 400px)
+    .main
+        &-text 
+            &__title
+                font-size: 25px
+            &__subtitle
+                font-size: 20px
     .feedback2
         &-wrap
             max-width: 250px

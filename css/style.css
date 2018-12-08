@@ -871,6 +871,13 @@ li span {
           justify-content: center;
 }
 
+.portfolio-title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 45px;
+  font-family: 'Museo Sans Bold', sans-serif;
+}
+
 .section-title {
   margin-bottom: 60px;
   font-size: 30px;
@@ -1197,7 +1204,7 @@ li span {
 
 .info-wrap__img {
   min-width: 100px;
-  height: 100px;
+  min-height: 100px;
   border-radius: 50%;
   border: 3px solid #ffd200;
   margin-bottom: 30px;
@@ -1859,7 +1866,8 @@ button, input {
     padding-bottom: 0;
   }
   .form {
-    max-width: 400px;
+    margin: auto;
+    max-width: 500px;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1868,6 +1876,9 @@ button, input {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .form-contacts__block-1 {
     -webkit-box-pack: center;
@@ -1890,6 +1901,9 @@ button, input {
   .form__input:first-child {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+  .portfolio {
+    padding-bottom: 0;
   }
   .price {
     display: -webkit-box;
@@ -2010,6 +2024,11 @@ button, input {
   .form {
     max-width: 400px;
   }
+  .form__subtitle {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .form__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2043,7 +2062,7 @@ button, input {
     margin-left: 25px;
   }
   .portfolio {
-    min-height: 770px;
+    min-height: 850px;
   }
   .feedback2-wrap {
     max-width: 400px;
@@ -2105,6 +2124,13 @@ button, input {
   .feedback2-wrap {
     max-width: 350px;
   }
+  .portfolio-title {
+    max-width: 300px;
+    font-size: 27px;
+    line-height: 35px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .price {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2139,6 +2165,9 @@ button, input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .info {
+    margin-bottom: 300px;
   }
   .info-title {
     font-size: 20px;
@@ -2271,6 +2300,14 @@ button, input {
   }
   .modal__hidden {
     display: none;
+  }
+  .portfolio {
+    max-height: 500px;
+  }
+  .portfolio-title {
+    max-width: 300px;
+    font-size: 23px;
+    line-height: 30px;
   }
   .info3-title {
     width: 250px;

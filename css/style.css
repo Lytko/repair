@@ -562,7 +562,7 @@ template {
 .feedback {
   padding: 94px 0;
   background: url("../img/feedback/feedback-bg.jpg") no-repeat center left 700px;
-  background-size: auto 130%;
+  background-size: auto 150%;
   position: relative;
   z-index: -1;
 }
@@ -882,7 +882,7 @@ li span {
 .feedback2 {
   padding: 94px 0;
   background: url("../img/feedback2/bg-img-fb2.png") no-repeat center left 600px;
-  background-size: contain;
+  background-size: auto 150%;
   position: relative;
   z-index: 1;
   min-height: 660px;

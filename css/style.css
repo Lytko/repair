@@ -1193,13 +1193,15 @@ li span {
 }
 
 .info-wrap__img {
-  max-width: 100px;
+  min-width: 100px;
   height: 100px;
   border-radius: 50%;
   border: 3px solid #ffd200;
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .info-wrap__img-1 {

@@ -2149,7 +2149,7 @@ button, input {
   }
   .footer-contacts__title {
     max-width: 400px;
-    font-size: 17px;
+    font-size: 25px;
   }
   .footer-items {
     margin-top: 30px;
@@ -2391,6 +2391,7 @@ button, input {
   }
   .footer-contacts__title {
     max-width: 300px;
+    font-size: 20px;
   }
   .footer-items {
     margin-top: 25px;

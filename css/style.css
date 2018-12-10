@@ -495,7 +495,7 @@ template {
 }
 
 .main-image {
-  z-index: 1;
+  z-index: 2;
 }
 
 .main-text__title {
@@ -563,7 +563,7 @@ template {
   background: url("../img/feedback/feedback-bg.jpg") no-repeat center left 700px;
   background-size: cover;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .feedback:before {
@@ -574,7 +574,7 @@ template {
   height: 100%;
   background-color: #fff;
   position: absolute;
-  z-index: -2;
+  z-index: -1;
 }
 
 .feedback-container {
@@ -2138,6 +2138,9 @@ button, input {
     padding-top: 50px;
     padding-bottom: 60px;
   }
+  .feedback {
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -2356,7 +2359,10 @@ button, input {
   .info-wrap__img {
     max-width: 50px;
     height: 50px;
-    background-size: 50%;
+    background-size: 35%;
+  }
+  .info-wrap__img-4 {
+    background-size: 30%;
   }
   .info-wrap__block {
     max-width: 50%;
@@ -2471,7 +2477,6 @@ button, input {
   .info-wrap__img {
     max-width: 50px;
     height: 50px;
-    background-size: 50%;
   }
   .info-wrap__block {
     min-width: 250px;
@@ -2491,6 +2496,17 @@ button, input {
     width: 180px;
     margin-left: 16px;
     margin-top: 16px;
+  }
+}
+
+@media (max-width: 350px) {
+  .modal-block2__items-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+  }
+  .modal__input {
+    min-width: 100%;
   }
 }
 

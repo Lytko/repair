@@ -1019,11 +1019,7 @@ li span {
   border-radius: 10px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
-  margin-bottom: 30px;
-}
-
-.form2__input:first-child {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form2__button {
@@ -1031,7 +1027,7 @@ li span {
   display: block;
   width: 100%;
   font-size: 16px;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
   max-height: 70px;
 }
 
@@ -1054,7 +1050,6 @@ li span {
 }
 
 .price-wrap {
-  width: 1170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1493,12 +1488,9 @@ button, input {
   .footer-map {
     width: 55%;
   }
-}
-
-@media (min-width: 1440px) {
-  .main-img {
-    min-width: 130%;
-    max-height: 130%;
+  .card {
+    max-width: 350px;
+    height: 390px;
   }
 }
 
@@ -1518,6 +1510,10 @@ button, input {
   }
   .footer-map {
     width: 55%;
+  }
+  .card {
+    max-width: 350px;
+    height: 390px;
   }
 }
 
@@ -1548,10 +1544,8 @@ button, input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .price-container {
     -webkit-box-orient: vertical;
@@ -1564,14 +1558,6 @@ button, input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .price-wrap {
-    max-width: 970px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -1706,6 +1692,14 @@ button, input {
   .info3-wrap2 {
     margin-bottom: 50px;
   }
+  .price-wrap {
+    width: 970px;
+  }
+  .card {
+    max-width: 300px;
+    height: 360px;
+    margin: 5px;
+  }
 }
 
 @media (max-width: 1110px) {
@@ -1759,6 +1753,14 @@ button, input {
     background: #fff;
     padding: 35px 0;
   }
+  .form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .form-contacts {
+    text-align: left;
+  }
   .modal {
     width: 100%;
   }
@@ -1803,12 +1805,25 @@ button, input {
   }
   .feedback2-block1 {
     min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .feedback2-block1__subtitle {
     margin-bottom: 30px;
   }
   .feedback2-advantages {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   .feedback2-block2 {
     min-width: 100%;
@@ -1818,32 +1833,43 @@ button, input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 90px;
+  }
+  .block1-title {
+    text-align: center;
   }
   .form2__button {
-    margin-bottom: 5px;
     background-color: #fff;
   }
   .price-container {
-    max-width: 800px;
+    max-width: 840px;
     padding-left: 0;
     padding-right: 0;
   }
   .price-wrap {
-    max-width: 800px;
+    max-width: 840px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .card {
+    max-width: 350px;
+    height: 390px;
+  }
   .info2-title {
     font-size: 25px;
+  }
+  .info3-container {
+    width: 750px;
+  }
+  .info3-wrap {
+    width: 100%;
+  }
+  .info3-wrap__items {
+    max-width: 330px;
   }
   .footer {
     display: -webkit-box;
@@ -1900,7 +1926,7 @@ button, input {
             flex-direction: row;
   }
   .price-container {
-    max-width: 750px !important;
+    max-width: 750px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1916,6 +1942,10 @@ button, input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .card {
+    max-width: 350px;
+    height: 390px;
   }
   .info-container {
     max-width: 750px;
@@ -1964,9 +1994,10 @@ button, input {
     font-size: 13px;
   }
   .header__button {
-    background-image: url("../img/feedback/phone.png");
+    background-image: url("/img/feedback/phone2.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: auto 18px,18px;
     min-width: 48px;
     min-height: 48px;
   }
@@ -2109,6 +2140,9 @@ button, input {
   }
   .info3-wrap {
     padding-top: 50px;
+  }
+  .info3-wrap__items {
+    max-width: 350px;
   }
   .info3-wrap2 {
     margin-bottom: 50px;

@@ -2197,6 +2197,9 @@ button, input {
   .feedback {
     padding-bottom: 100px;
   }
+  .form-contacts__text {
+    text-align: center;
+  }
 }
 
 @media (max-width: 650px) {

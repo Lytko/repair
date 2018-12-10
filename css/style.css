@@ -1366,7 +1366,7 @@ li span {
 
 .footer-map {
   width: 50%;
-  min-height: 640px;
+  height: 640px;
 }
 
 .footer-contacts {
@@ -1885,6 +1885,10 @@ button, input {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    max-height: 420px !important;
+  }
+  .footer-map__item {
+    height: 420px;
   }
   .footer-contacts {
     margin-right: auto;

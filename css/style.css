@@ -1994,7 +1994,7 @@ button, input {
     font-size: 13px;
   }
   .header__button {
-    background-image: url("/img/feedback/phone2.png");
+    background-image: url("../img/feedback/phone2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 18px,18px;
